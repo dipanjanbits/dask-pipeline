@@ -48,3 +48,4 @@ Step 4: python app.py
 
 
 Dask Dashboad is running in: http://127.0.0.1:8787/status
+![image](https://github.com/user-attachments/assets/7bd95ead-6867-48b5-9426-744a080aa420)
