@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""
-Scalable Machine Learning Pipeline with Dask - WORKING VERSION
-=============================================================
-
-A fixed implementation that only uses models actually available in Dask-ML.
-This version focuses on what works reliably across different Dask-ML versions.
-
-Author: AI Assistant
-Date: June 2025
-"""
-
 import os
 import time
 import warnings
