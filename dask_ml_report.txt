@@ -1,0 +1,64 @@
+
+DASK MACHINE LEARNING PIPELINE - ANALYSIS REPORT
+===============================================
+
+Generated: 2025-06-21 21:33:22
+
+EXECUTIVE SUMMARY
+----------------
+This analysis demonstrates a working Dask-ML pipeline using only
+the models and features that are actually available in the current
+Dask-ML library.
+
+MODELS TESTED
+------------
+Dask Models:
+- Native Dask-ML Logistic Regression
+- Dask-wrapped Random Forest (using ParallelPostFit)
+- Incremental SGD Classifier
+
+Traditional Models:
+- Scikit-learn Logistic Regression
+- Scikit-learn Random Forest
+- Scikit-learn SGD Classifier
+
+PERFORMANCE RESULTS
+------------------
+Training Time Results:
+- dask_logistic_regression: 27.46s vs 4.19s (speedup: 0.15x)
+- dask_random_forest: 10.73s vs 4.14s (speedup: 0.39x)
+
+
+KEY FINDINGS
+-----------
+1. Dask-ML has limited native model implementations
+2. Dask wrappers (ParallelPostFit, Incremental) extend functionality
+3. Performance benefits depend on dataset size and available resources
+4. Memory efficiency is a key advantage of Dask
+
+RECOMMENDATIONS
+--------------
+1. Use Dask for datasets that don't fit in memory
+2. Leverage Dask wrappers for unsupported models
+3. Consider network overhead in distributed setups
+4. Start with smaller datasets to test your pipeline
+
+TECHNICAL NOTES
+--------------
+- Dask Client: {self.n_workers} workers
+- Dataset: Synthetic classification data
+- Preprocessing: Dask-ML StandardScaler
+- Evaluation: Accuracy and timing metrics
+
+LIMITATIONS OF CURRENT DASK-ML
+-----------------------------
+- Limited native model selection
+- Some algorithms require wrappers
+- Documentation gaps for some features
+- Version compatibility issues
+
+CONCLUSION
+----------
+While Dask-ML has limitations, it provides valuable tools for
+scaling machine learning workflows. The wrappers and incremental
+learning capabilities make it useful for large-scale applications.

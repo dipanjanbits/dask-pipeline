@@ -1,0 +1,8 @@
+dask[complete]
+dask-ml
+scikit-learn
+matplotlib
+seaborn
+joblib
+numpy 
+pandas
